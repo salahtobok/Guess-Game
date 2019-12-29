@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.evo.guess.guessWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="172dp"
+        tools:layout="@layout/fragment_guess_words" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/reload"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_below="@+id/checkBtn"
+        android:layout_centerHorizontal="true"
+        android:onClick="reload"
+        android:src="@drawable/autorenew"
+        app:cb_color="#cecece"
+        app:cb_pressedRingWidth="8dip" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/checkBtn"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_below="@+id/fragment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-172dp"
+        android:onClick="checkResult"
+        android:src="@drawable/check_circle"
+        app:cb_color="#cecece"
+        app:cb_pressedRingWidth="8dip" />
+
+    <TextView
+        android:id="@+id/bScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="74dp"
+        android:gravity="right"
+        android:text="0"
+        android:textColor="#ff0004"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_alignStart="@+id/bScore"
+        android:layout_marginBottom="-58dp"
+        android:gravity="right"
+        android:text="0"
+        android:textColor="#ff0004"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        app:srcCompat="@drawable/guessofront" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/score"
+        android:text="Score :"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/bScore"
+        android:text="Best score :"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Last score :" />
+
+    <TextView
+        android:id="@+id/lastScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bScore"
+        android:gravity="right"
+        android:text="0"
+        android:textColor="#ff0004" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:text="Guess the artist !"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>
